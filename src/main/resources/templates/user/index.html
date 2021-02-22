@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <h1 th:text = "${'Welcome ' user.username ' to your page'}"></h1>
+    <label><a href="/" />Spa Menu</label>
+
+    <h3>
+        <table>
+            <thread>
+                <tr>
+                    <th>Username</th>
+                    <th>Link</th>
+                </tr>
+            </thread>
+        </table>
+        <tr th:each="user: ${users}">
+            <td>
+                <a href="/user/details/1"></a>
+            </td>
+
+        </tr>
+
+    </h3>
+</body>
+</html>
